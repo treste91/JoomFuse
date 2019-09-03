@@ -1,19 +1,19 @@
-GPTW Lists
+JommFuse
 **********
 
-This is a detailed guide on how to use the GPTW Lists component of the greatplacetowork.com.
+This is a detailed guide of the JoomFuse component for Joomla.
 This documentation provides a basic explanation of the functionality provided by this component.
 
 Features
 ========
 
-- Documentation of the functionality of the Great Place to Work Lists component 
+- Documentation of the functionality of the JoomFuse component. 
 
 Contribute
 ==========
 
-- Issue Tracker: github.com/treste91/Great-Place-to-Work-Lists/issues
-- Source Code: github.com/treste91/Great-Place-to-Work-Lists
+- Issue Tracker: github.com/treste91/JoomFuse/issues
+- Source Code: github.com/treste91/JoomFuse
 
 Support
 =======
