@@ -1,0 +1,20 @@
+Technical Features
+==================
+
+We use the xmlrpc Infusionsoft API endpoint with our own client-side implementation that is based off the PHP-xmlrpc library.
+
+The JF core comes in one Joomla installation package that contains one component that is responsible for the bulk of the codebase, four plugins that are responsible for initiating the appropriate component-provided procedures at the appropriate Joomla plugin events and a module for triggering tag associations for pageviews. 
+
+Please note that the package installation enables all the contained extensions and we should always keep them enabled:
+
+1. com_joomfuse: The core component of the project
+
+2. plg_system_joomfuse: Provides triggers/support for the JF cron, debug logging and short-code support.
+
+3. plg_user_joomfuse: Provides triggers/support for triggering the “capture user data before any change can happen” call to the JF core and, if required, capturing plaintext passwords whenever possible.
+
+4. plg_editors-xtd_joomfuse: Provides a joomla editor button that provides a UI for inserting JF shortcode values into editor-powered locations (articles, modules etc).
+
+5. plg_joomfuse_joomla: Translates and stores the IFS contact values into vanilla-Joomla field values, requests usergroup modifications based on the contact information during HTTP POSTs, adds support for Joomla com_fields custom fields, takes care of contact opt-Ins and usergroup-based tag setting upon new contact associations, adds the “mapped field changed from the front-end” tag when appropriate/configured, sends new user registration emails when appropriate/configured, cleans up contacts upon user deletions (feature broken in JF2),.
+
+6. mod_joomfusetrigger: Assigns a configurable IFS tag to the user that is rendering the module (by viewing a page in the front-end). Used to map/create IFS contacts upon pageloads and/or assigning tags for noting which contacts have viewed a specific page on the site. Please note that this module makes API calls every time it renders and as such should be used sparringly. Also keep in mind that Joomla caching may interfere with the actual tag setting: If joomla serves a cached version of the page no tag will be set.
