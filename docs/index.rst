@@ -25,6 +25,6 @@ Contents:
    :caption: Events
    :maxdepth: 3
    
-   events/events
+   events/joomfuse_events
    events/joomla_vanilla_events
    events/3rd_part_events
