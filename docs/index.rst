@@ -15,13 +15,13 @@ Contents:
 
    *
 
-.. toctree::
-   :caption: Backend
-   :maxdepth: 3
+$.. toctree::
+$   :caption: Backend
+$   :maxdepth: 3
    
-   backend/db_entries
-   backend/translations
-   backend/languages
+$   backend/db_entries
+$   backend/translations
+$   backend/languages
    
 .. toctree::
    :caption: Frontend
