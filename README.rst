@@ -1,4 +1,4 @@
-JommFuse
+JoomFuse
 **********
 
 This is a detailed guide of the JoomFuse component for Joomla.
