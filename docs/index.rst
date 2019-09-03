@@ -19,7 +19,4 @@ Contents:
    :caption: Events
    :maxdepth: 3
    
-   frontend/configuration
-   frontend/lists
-   frontend/list
-   frontend/yearly_list
+   events/event1
