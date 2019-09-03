@@ -14,15 +14,15 @@ Contents:
    :glob:
 
    *
-   
-.. toctree::
-   :caption: Events
-   :maxdepth: 3
-   
-   events/event1
 
 .. toctree::
    :caption: Procedures
    :maxdepth: 3
    
    procedures/upload_contact
+   
+.. toctree::
+   :caption: Events
+   :maxdepth: 3
+   
+   events/event1
