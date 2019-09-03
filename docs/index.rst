@@ -14,26 +14,12 @@ Contents:
    :glob:
 
    *
-
-$.. toctree::
-$   :caption: Backend
-$   :maxdepth: 3
-   
-$   backend/db_entries
-$   backend/translations
-$   backend/languages
    
 .. toctree::
-   :caption: Frontend
+   :caption: Events
    :maxdepth: 3
    
    frontend/configuration
    frontend/lists
    frontend/list
    frontend/yearly_list
-   
-.. toctree::
-   :caption: API
-   :maxdepth: 3
-   
-   api/intro
