@@ -43,8 +43,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Great Place to Work Lists'
-copyright = u'2018, GPTW'
+project = u'JoomFuse'
+copyright = u'2019, JoomFuse'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
