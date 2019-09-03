@@ -20,3 +20,9 @@ Contents:
    :maxdepth: 3
    
    events/event1
+
+.. toctree::
+   :caption: Procedures
+   :maxdepth: 3
+   
+   procedures/upload_contact
