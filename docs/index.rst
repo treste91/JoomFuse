@@ -26,3 +26,5 @@ Contents:
    :maxdepth: 3
    
    events/events
+   events/joomla_vanilla_events
+   events/3rd_part_events
