@@ -150,11 +150,11 @@ Currently the following plugins utilize this event:
 
 8. plg_joomfuse_joomla: Provide values for the 
   
-  1. vanilla Joomla user fields
+ 1. vanilla Joomla user fields
   
-  2. The old plugin-based Joomla profile fields (plg_joomla_profile) 
+ 2. The old plugin-based Joomla profile fields (plg_joomla_profile) 
   
-  3. The new com_fields custom user fields
+ 3. The new com_fields custom user fields
 
 onNewUserRegistrationEmail(array $userProperties, $password)
 ------------------------------------------------------------
@@ -174,15 +174,15 @@ Called from plg_joomla_joomfuse when a JUser has been deleted in order for all t
 
 2. plg_joomfuse_joomla: Appends the “user deleted” tag to the contact and removes all the JoomFuse-utilized tags that are possibly set for the user. These are:
   
-  1. Tags associated with all the mapped usergroups
+ 1. Tags associated with all the mapped usergroups
+
+ 2. New User Tag
+
+ 3. New HTTP-POST user tag
   
-  2. New User Tag
+ 4. HTTP POST success tag
   
-  3. New HTTP-POST user tag
-  
-  4. HTTP POST success tag
-  
-  5. HTTP POST fail tag
+ 5. HTTP POST fail tag
            
 The userProperties parameter is the user info array as provided via the user/onUserAfterDelete event. There are no return values for this event.
 
