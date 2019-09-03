@@ -3,8 +3,10 @@ Events
 
 The following events of the “joomfuse” group are being thrown:
 
-onContactUserDelete(array $userProperties)  
-------------------------------------------
+onContactUserDelete  
+-------------------
+
+Declaration: onContactUserDelete(array $userProperties)
 
 Triggered from plg_user_joomfuse while catching the vanilla joomla user.onUserAfterDelete($user, $success, $msg) event. The contents of the $userProperties are the contents of the $user array. Please note that the event is not being thrown if $success is false. 
 
@@ -12,76 +14,98 @@ Triggered from plg_user_joomfuse while catching the vanilla joomla user.onUserAf
 
 Currently, plg_joomfuse_jomsocial and plg_joomfuse_joomla catch this event
 
-onJoomFuseBeforeContactSave($userid, array $initialContactFields, array $finalContactFields)
---------------------------------------------------------------------------------------------
+onJoomFuseBeforeContactSave
+---------------------------
+
+Declaration: onJoomFuseBeforeContactSave($userid, array $initialContactFields, array $finalContactFields)
 
 Triggered from the JF Core IFSContact class, it signifies the start of the consideration process for pushing data to Infusionsoft. At the current form, there is no direct indication on whether any data will be pushed to IFS and we can expect one such call for each intercepted user/contact that was accessed during the pageload. This event can interrupt the contact update process by throwing an Exception.
 
 Currently plg_joomfuse_joomla catches this event in order to (optionally) push the frontEndUserChangeTag to IFS, if configured so.
 
-OnJoomFuseAfterContactSave($userid, array $initialContactFields, array $finalContactFields)
--------------------------------------------------------------------------------------------
+OnJoomFuseAfterContactSave
+--------------------------
+
+Declaration: OnJoomFuseAfterContactSave($userid, array $initialContactFields, array $finalContactFields)
 
 Triggered from the JF Core IFSContact class. It signifies that the core has finished considering sending to IFS, and possibly doing so, contact data for the specified user/contact.
 
 Currently no plugins catch and utilize this event
 
-OnJoomFuseBeforeContactAssociation($userid, $contactid)
--------------------------------------------------------
+OnJoomFuseBeforeContactAssociation
+----------------------------------
+
+Declaration: OnJoomFuseBeforeContactAssociation($userid, $contactid)
 
 Triggered from the JF Core IFSContact class, it signifies that a user/contact association is about to be created.
 
 Currently no plugins catch and utilize this event.
 
-OnJoomFuseAfterContactAssociation($userid, $contactid)
-------------------------------------------------------
+OnJoomFuseAfterContactAssociation
+---------------------------------
+
+Declaration: OnJoomFuseAfterContactAssociation($userid, $contactid)
 
 Triggered from the JF Core IFSContact class, it signifies that a user/contact association has been created.
 
 Currently plg_joomfuse_joomla and plg_joomfuse_jomsocial utilize this event to add/remove tags according to the (vanilla Joomla or JomSocial) group/tag associations they track.
 
-OnIFSHTTPPostStart()
---------------------
+OnIFSHTTPPostStart
+------------------
+
+Declaration: OnIFSHTTPPostStart()
 
 Triggered from the JF Core IFSFactory when an HTTP POST is beginning execution. Simply signals the beginning of the http post process and does not expect any return values.
 
 Currently no plugins catch and utilize this event
 
-OnIFSHTTPPostComplete(array $userProperties, $isNew)
-----------------------------------------------------
+OnIFSHTTPPostComplete
+---------------------
+
+Declaration: OnIFSHTTPPostComplete(array $userProperties, $isNew)
 
 Triggered from the JF Core IFSFactory when an HTTP POST has completed execution. Simply signals the end of the http post process and does not expect any return values.
 
 Currently no plugins catch and utilize this event.
 
-JoomfusefieldMapping GetCustomFieldMappings()
----------------------------------------------
+GetCustomFieldMappings
+----------------------
+
+Declaration: JoomfusefieldMapping GetCustomFieldMappings()
 
 Triggered from the JF Core (IFSFactory::getFieldMappings()) to provide the “list of IFS fields we’re working with” (and an uncalled-for call from the shortcodefields view model that simply needs to use the core) when we need to figure out what custom fields each JF extension is utilizing. 
 
 As expected, all our supported 3rd party extensions utilize this call:  plg_joomfuse_jooma, plg_joomfuse_jomsocial and plg_joomfuse_communitybuilder.
 
-Int[] OnPrepareACLGrant(IFSContact $ifs_contact, $isNew)
---------------------------------------------------------
+OnPrepareACLGrant
+-----------------
+
+Declaration: Int[] OnPrepareACLGrant(IFSContact $ifs_contact, $isNew)
 
 Triggered from the JF Core during the http post parsing when trying to decide if we need to modify the usergroups of the J user. The return array contains ints of the respective J usergroups we want the user to be added to.
 
-Int[] OnPrepareACLDrop(IFSContact $ifs_contact, int[] $addedGroups, $isNew)
----------------------------------------------------------------------------
+OnPrepareACLDrop
+----------------
+
+Declaration: Int[] OnPrepareACLDrop(IFSContact $ifs_contact, int[] $addedGroups, $isNew)
 
 Triggered from the JF Core during the http post parsing when trying to decide if we need to modify the usergroups of the J user. The $addedGroups params contains the groups that all the plugins across the platform have requested to add on the OnPrepareACLGrant call made previously. The returned array is an array of ints that signify the J usergroup id that this plugin wants to have the contact as a part of. Please note that even if a plugin requests the participation to a usergroup, that might end up being rejected due to another (or the same) plugin requesting the same usergroup to not be present (removals take precedence). 
 
 Currently only plg_joomfuse_joomla utilize this API call.
 
-onCustomUserRegistration($ifs_contact)
---------------------------------------
+onCustomUserRegistration
+------------------------
+
+Declaration: onCustomUserRegistration($ifs_contact)
 
 Triggered from the JF Core HTT POST parser when it’s about to create a new J User. This event gives the opportunity to plugins to implement their own user registration process. If a plugin decides it wants to utilize this feature, it must throw a JoomfuseRegistrationSuccess exception that contains the created Juser in it. We throw the event in order to make sure that only one plugin can actually utilize this feature, or we can end up with double user creation issues. 
 
 Currently no plugins  utilize this event.
 
-onSetJoomlaFieldsFromContact($user_id, stdClass $ifs_contact, $isNew)
----------------------------------------------------------------------
+onSetJoomlaFieldsFromContact
+----------------------------
+
+Declaration: onSetJoomlaFieldsFromContact($user_id, stdClass $ifs_contact, $isNew)
 
 Triggered from the JF Core JTTP POST parser as a signal to all the supported extensions that they need to populate the Juser values they keep track of according to the contact values contained within the $ifs_contact object. 
 
@@ -89,22 +113,29 @@ No return value.
 
 As expected, all plugins of the joomfuse group utilize this event: plg_joomfuse_joomla, plg_joomfuse_communitybuilder, plg_joomfuse_jomsocial.
 
-onJoomFuseBeforeContactSave($userid, JoomFuseAPIField[] $initialContactFields, JoomFuseAPIField[] $finalContactFields)
-----------------------------------------------------------------------------------------------------------------------
+onJoomFuseBeforeContactSave
+---------------------------
+
+Declaration: onJoomFuseBeforeContactSave($userid, JoomFuseAPIField[] $initialContactFields, JoomFuseAPIField[] $finalContactFields)
+
 
 Triggered from the JF Core (IFSContact::save()) when a contact is about to be saved. The two field arrays contain the current and future contents of the contact fields for examination. There are no return values, but throwing an Exception will prevent the update of the IFS Contact. 
 
 Currently, only plg_joomfuse_joomla utilizes this event.
 
-onJoomFuseAfterContactSave($userid, JoomFuseAPIField[] $initialContactFields, JoomFuseAPIField[] $finalContactFields)
----------------------------------------------------------------------------------------------------------------------
+onJoomFuseAfterContactSave
+--------------------------
+
+Declaration: onJoomFuseAfterContactSave($userid, JoomFuseAPIField[] $initialContactFields, JoomFuseAPIField[] $finalContactFields)
 
 Triggered from the JF Core (IFSContact::save()) when a contact has been saved. The two field arrays contain the previous and current contact fields for examination. There are no return values. 
 
 Currently no extensions are utilizing this event.
 
-onJoomfuseBeforeContactAssociation($user_id, $contact_id)
----------------------------------------------------------
+onJoomfuseBeforeContactAssociation
+----------------------------------
+
+Declaration: onJoomfuseBeforeContactAssociation($user_id, $contact_id)
 
 Triggered from the JF Core (IFSContact::load()) when a J User is about to be associated with an IFS Contact. 
 
@@ -112,8 +143,10 @@ There are no return values.
 
 Currently no plugins utilize this event.
 
-onJoomfuseAfterContactAssociation(IFSContact $contact)
-------------------------------------------------------
+onJoomfuseAfterContactAssociation
+---------------------------------
+
+Declaration: onJoomfuseAfterContactAssociation(IFSContact $contact)
 
 Triggered from the JF Core (IFSContact::load()) when a J User has been associated with an IFS Contact. 
 
@@ -125,8 +158,10 @@ Currently the following plugins utilize this event:
 
 2. plg_joomfuse_jomsocial to enforce the tag/jomsocial-group mapping configured.
 
-getJoomFuseContactFields($user_id, $isContactCreation)
-------------------------------------------------------
+getJoomFuseContactFields
+------------------------
+
+Declaration: getJoomFuseContactFields($user_id, $isContactCreation)
 
 Triggered from the JF Core:
 
@@ -156,8 +191,10 @@ Currently the following plugins utilize this event:
   
  3. The new com_fields custom user fields
 
-onNewUserRegistrationEmail(array $userProperties, $password)
-------------------------------------------------------------
+onNewUserRegistrationEmail
+--------------------------
+
+Declaration: onNewUserRegistrationEmail(array $userProperties, $password)
 
 Called from the JF Core (IFSFactory::registerUser() while parsing an HTTP POST) and provides the opportunity to any listening plugin to compose it’s own welcome/registration email. The provided parameters are the JUser object as an array and the plaintext password used to create the account (which is one of the main reasons for the existence of this event). The return value is an array that is expected to have the ‘topic’ and ‘content’ array keys with the appropriate values. Please note that if more than one plugins return data for this event, only the contents of the last one will be used. 
 
@@ -165,8 +202,10 @@ Currently, only plg_joomfuse_joomla is utilizing this event.
 
 This feature and event should be considered for removal in JF3 in favor of the IFS-sourced emails.
 
-onContactUserDelete($userProperties)
-------------------------------------
+onContactUserDelete
+-------------------
+
+Declaration: onContactUserDelete($userProperties)
 
 Called from plg_joomla_joomfuse when a JUser has been deleted in order for all the listening plugins to perform any contact cleanup needed. The following plugins currently listen for this event:
 
@@ -186,8 +225,10 @@ Called from plg_joomla_joomfuse when a JUser has been deleted in order for all t
            
 The userProperties parameter is the user info array as provided via the user/onUserAfterDelete event. There are no return values for this event.
 
-onJoomfuseCron($handler, JRegistry $registry)
----------------------------------------------
+onJoomfuseCron
+--------------
+
+Declaration: onJoomfuseCron($handler, JRegistry $registry)
 
 Triggered via the JFCore (IFSFactory::cronCheck()) which sends to all listening plugins any cron task that should now execute. The handler param contains the identifier of the plugin responsible to handle this call and the data that contains all data pertaining the execution of the task in a JRegistry object. 
 
