@@ -25,4 +25,4 @@ Contents:
    :caption: Events
    :maxdepth: 3
    
-   events/event1
+   events/events
