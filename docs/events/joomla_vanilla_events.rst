@@ -1,4 +1,4 @@
-Joomla vanilla events
+Joomla Vanilla Events
 =====================
 
 In order to provide all the needed functionality, the JF plugins intercept the following vanilla Joomla events:
