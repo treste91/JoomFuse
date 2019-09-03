@@ -1,5 +1,5 @@
-Events
-======
+JoomFuse Events
+===============
 
 The following events of the “joomfuse” group are being thrown:
 
