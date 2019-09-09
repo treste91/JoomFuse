@@ -19,7 +19,7 @@ Contents:
    :caption: Procedures
    :maxdepth: 3
    
-   procedures/upload_contact
+   procedures/register_user
    
 .. toctree::
    :caption: Events
