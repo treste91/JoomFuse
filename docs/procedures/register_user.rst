@@ -15,6 +15,7 @@ Register User
       8 [label="Yes." shape=oval]
       9 [label="Does the user exist?" shape=invhouse]
       10 [label="No." shape=oval]
+      11 [label="The user is new." shape=rectangle]
       
       1 -> 2 [arrowhead=vee arrowsize=1]
       2 -> 3 [arrowhead=vee arrowsize=1]
@@ -26,4 +27,5 @@ Register User
       8 -> 9 [arrowhead=vee arrowsize=1]
       6 -> 9 [arrowhead=vee arrowsize=1]
       7 -> 10 [arrowhead=vee arrowsize=1]
+      10 -> 11 [arrowhead=vee arrowsize=1]
    }
