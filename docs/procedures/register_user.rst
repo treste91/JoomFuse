@@ -6,7 +6,7 @@ Register User
    digraph {
    
       1 [label="Call to: 'IFSFactory::ParseHttpPost'." shape=rectangle]
-      2 [label="Trigger event: 'onIFSHttpPostStart'." shape=rectangle]
+      2 [label="Trigger event: 'onIFSHttpPostStart'."URL="https://joomfuse.readthedocs.io/en/latest/events/joomfuse_events.html#onifshttppoststart" shape=rectangle]
       3 [label="Call to: 'IFSApi::getContactByIFSId'." shape=rectangle]
       4 [label="Is there a user associated\n with the current IFSId?" shape=invhouse]
       5 [label="Yes." shape=oval]
@@ -23,13 +23,13 @@ Register User
 		   node [style=filled,color=white];
          label="Do the component parameters\n allow new user registration?"
          12 [label="Call to: 'IFSApi::getTagsByIFSId'." shape=rectangle]
-         13 [label="Trigger event: 'onCustomUserRegistration'." shape=rectangle]
+         13 [label="Trigger event: 'onCustomUserRegistration'." URL="https://joomfuse.readthedocs.io/en/latest/events/joomfuse_events.html#oncustomuserregistration" shape=rectangle]
       }
       
       14 [label="Yes." shape=oval]
       15 [label="No." shape=oval]
       16 [label="Manual user registration." shape=rectangle]
-      17 [label="Trigger event: 'onSetJoomlaFieldsFromContact'." shape=rectangle]
+      17 [label="Trigger event: 'onSetJoomlaFieldsFromContact'." URL="https://joomfuse.readthedocs.io/en/latest/events/joomfuse_events.html#onsetjoomlafieldsfromcontact" shape=rectangle]
       18 [label="Set the user groups." shape=rectangle]
       19 [label="Save the user." shape=rectangle]
       20 [label="Call to: 'IFSFactory::getUserContact'." shape=rectangle]
