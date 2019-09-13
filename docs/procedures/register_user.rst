@@ -5,14 +5,14 @@ Register User
 
    digraph {
    
-      1 [label="Call to: 'IFSFactory::ParseHttpPost'." shape=box]
-      2 [label="Trigger event: 'onIFSHttpPostStart'." shape=box]
+      1 [label="Call to: 'IFSFactory::ParseHttpPost'." shape=trapezium]
+      2 [label="Trigger event: 'onIFSHttpPostStart'." shape=rectangle]
       3 [label="Call to: 'IFSApi::getContactByIFSId'." shape=box]
       4 [label="Is there a user associated with the current IFSId?" shape=oval]
       5 [label="Yes." shape=underline]
       6 [label="No." shape=underline]
       7 [label="Is there a user associated with the contact's email,  first name and last name?" shape=oval]
-      8 [label="Yes." shape=underline]
+      8 [label="Yes." shape=circle]
       9 [label="Does the user exist?" shape=oval]
       
       1 -> 2
