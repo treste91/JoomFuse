@@ -8,22 +8,22 @@ Register User
       1 [label="Call to: 'IFSFactory::ParseHttpPost'." shape=rectangle]
       2 [label="Trigger event: 'onIFSHttpPostStart'." shape=rectangle]
       3 [label="Call to: 'IFSApi::getContactByIFSId'." shape=rectangle]
-      4 [label="Is there a user\\ associated with the current IFSId?" shape=invhouse]
+      4 [label="Is there a user\n associated with the current IFSId?" shape=invhouse]
       5 [label="Yes." shape=oval]
       6 [label="No." shape=oval]
-      7 [label="Is there a user\\ associated with the contact's email,\\ first name and last name?" shape=invhouse]
+      7 [label="Is there a user\n associated with the contact's email,\n first name and last name?" shape=invhouse]
       8 [label="Yes." shape=oval]
       9 [label="Does the user exist?" shape=invhouse]
       10 [label="No." shape=oval]
       
       1 -> 2 [arrowhead=vee arrowsize=1]
-      2 -> 3
-      3 -> 4
-      4 -> 5
-      4 -> 6
-      6 -> 7
-      7 -> 8
-      8 -> 9
-      6 -> 9
-      7 -> 10
+      2 -> 3 [arrowhead=vee arrowsize=1]
+      3 -> 4 [arrowhead=vee arrowsize=1]
+      4 -> 5 [arrowhead=vee arrowsize=1]
+      4 -> 6 [arrowhead=vee arrowsize=1]
+      6 -> 7 [arrowhead=vee arrowsize=1]
+      7 -> 8 [arrowhead=vee arrowsize=1]
+      8 -> 9 [arrowhead=vee arrowsize=1]
+      6 -> 9 [arrowhead=vee arrowsize=1]
+      7 -> 10 [arrowhead=vee arrowsize=1]
    }
