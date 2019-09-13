@@ -18,12 +18,18 @@ Register User
       11 [label="The user is new." shape=rectangle]
       
       subgraph cluster_1 {
+         style=filled;
+         color=lightgrey;
+		   node [style=filled,color=white];
          label="Do the component parameters\n allow new user registration?"
          12 [label="Call to: 'IFSApi::getTagsByIFSId'." shape=rectangle]
          13 [label="Trigger event: 'onCustomUserRegistration'." shape=rectangle]
-         14 [label="Yes." shape=oval]
-         15 [label="No." shape=oval]
       }
+      
+      14 [label="Yes." shape=oval]
+      15 [label="No." shape=oval]
+      16 [label="Manual user registration." shape=rectangle]
+      17 [label="Trigger event: 'onSetJoomlaFieldsFromContact'." shape=rectangle]      
       
       
       1 -> 2 [arrowhead=vee arrowsize=1]
@@ -41,4 +47,7 @@ Register User
       12 -> 13 [arrowhead=vee arrowsize=1]
       13 -> 14 [arrowhead=vee arrowsize=1]
       13 -> 15 [arrowhead=vee arrowsize=1]
+      15 -> 16 [arrowhead=vee arrowsize=1]
+      16 -> 17 [arrowhead=vee arrowsize=1]
+      14 -> 17 [arrowhead=vee arrowsize=1]
    }
