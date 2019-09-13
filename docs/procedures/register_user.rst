@@ -49,7 +49,7 @@ Register User
       6 -> 9 [arrowhead=vee arrowsize=1]
       7 -> 10 [arrowhead=vee arrowsize=1]
       10 -> 11 [arrowhead=vee arrowsize=1]
-      11 -> cluster_1 [arrowhead=vee arrowsize=1]
+      11 -> 12 [arrowhead=vee arrowsize=1]
       12 -> 13 [arrowhead=vee arrowsize=1]
       13 -> 14 [arrowhead=vee arrowsize=1]
       13 -> 15 [arrowhead=vee arrowsize=1]
