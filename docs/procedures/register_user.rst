@@ -35,7 +35,7 @@ Register User
       20 [label="Call to: 'IFSFactory::getUserContact'." shape=rectangle]
       21 [label="Assign the 'success' tag and/or goal." shape=rectangle]
       22 [label="Assign the 'new user' tag." shape=rectangle]
-      23 [label="Trigger event: 'onIFSHttpPostComplete'." url="https://joomfuse.readthedocs.io/en/latest/events/joomfuse_events.html#onifshttppostcomplete" shape=rectangle]
+      23 [label="Trigger event: 'onIFSHttpPostComplete'." URL=https://joomfuse.readthedocs.io/en/latest/events/joomfuse_events.html#onifshttppostcomplete shape=rectangle]
       
       
       1 -> 2 [arrowhead=vee arrowsize=1]
