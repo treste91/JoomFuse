@@ -29,7 +29,13 @@ Register User
       14 [label="Yes." shape=oval]
       15 [label="No." shape=oval]
       16 [label="Manual user registration." shape=rectangle]
-      17 [label="Trigger event: 'onSetJoomlaFieldsFromContact'." shape=rectangle]      
+      17 [label="Trigger event: 'onSetJoomlaFieldsFromContact'." shape=rectangle]
+      18 [label="Set the user groups." shape=rectangle]
+      19 [label="Save the user." shape=rectangle]
+      20 [label="Call to: 'IFSFactory::getUserContact'." shape=rectangle]
+      21 [label="Assign the 'success' tag and/or goal." shape=rectangle]
+      22 [label="Assign the 'new user' tag." shape=rectangle]
+      23 [label="Trigger event: 'onIFSHttpPostComplete'." shape=rectangle]
       
       
       1 -> 2 [arrowhead=vee arrowsize=1]
@@ -43,7 +49,7 @@ Register User
       6 -> 9 [arrowhead=vee arrowsize=1]
       7 -> 10 [arrowhead=vee arrowsize=1]
       10 -> 11 [arrowhead=vee arrowsize=1]
-      11 -> 12 [arrowhead=vee arrowsize=1]
+      11 -> cluster_1 [arrowhead=vee arrowsize=1]
       12 -> 13 [arrowhead=vee arrowsize=1]
       13 -> 14 [arrowhead=vee arrowsize=1]
       13 -> 15 [arrowhead=vee arrowsize=1]
