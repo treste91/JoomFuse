@@ -2,7 +2,7 @@
 
    digraph {
 
-      subgraph a {
+      subgraph cluster_1 {
       
         style=filled;
         color=lightgrey;
@@ -24,7 +24,7 @@
         
       }
       
-      subgraph b {
+      subgraph cluster_2 {
       
         style=filled;
         color=lightgrey;
