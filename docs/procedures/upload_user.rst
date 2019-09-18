@@ -2,7 +2,7 @@ Upload User
 ***********
 
 Before saving the user!
-=======================
+-----------------------
 
 .. graphviz::
 
@@ -39,7 +39,7 @@ Before saving the user!
    }
    
 After saving the user!
-======================
+----------------------
 
 .. graphviz::
    
