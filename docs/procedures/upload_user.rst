@@ -24,6 +24,7 @@ Upload User
         10 [label="Is the email modified?" shape=invhouse]
         11 [label="Yes." shape=oval]
         12 [label="No." shape=oval]
+        13 [label="Do nothing.'." shape=Mcircle]
         
       }
       
@@ -52,21 +53,20 @@ Upload User
         29 [label="No." shape=oval]
         30 [label="Call to: 'IFSContact::optIn'." shape=rectangle]
         31 [label="Sync the user groups.'." shape=rectangle]
+        32 [label="Do nothing.'." shape=Mcircle]
         
       }
-      
-      32 [label="Do nothing.'." shape=Mcircle]
 
       1 -> 2 [arrowhead=vee arrowsize=1]
       2 -> 3 [arrowhead=vee arrowsize=1]
       2 -> 4 [arrowhead=vee arrowsize=1]
-      4 -> 32 [arrowhead=vee arrowsize=1]
+      4 -> 13 [arrowhead=vee arrowsize=1]
       3 -> 5 [arrowhead=vee arrowsize=1]
       5 -> 6 [arrowhead=vee arrowsize=1]
       6 -> 7 [arrowhead=vee arrowsize=1]
       7 -> 8 [arrowhead=vee arrowsize=1]
       7 -> 9 [arrowhead=vee arrowsize=1]
-      9 -> 32 [arrowhead=vee arrowsize=1]
+      9 -> 13 [arrowhead=vee arrowsize=1]
       8 -> 10 [arrowhead=vee arrowsize=1]
       10 -> 11 [arrowhead=vee arrowsize=1]
       10 -> 12 [arrowhead=vee arrowsize=1]
