@@ -5,7 +5,7 @@ Upload User
 
    digraph {
         
-      1 [label="Catch event: 'onUserBeforeSave'." shape=triangle]
+      1 [label="Catch event: 'onUserBeforeSave'." shape=trapeziod]
       2 [label="Is the http post parsing?" shape=invhouse]
       3 [label="Yes." shape=oval]
       4 [label="No." shape=oval]
@@ -34,10 +34,12 @@ Upload User
       10 -> 12 [arrowhead=vee arrowsize=1]
       
    }
+
+.. graphviz::
    
    digraph {
    
-      14 [label="Catch event: 'onUserAfterSave'." shape=triangle]
+      14 [label="Catch event: 'onUserAfterSave'." shape=trapeziod]
       15 [label="Was the save successful?" shape=invhouse]
       16 [label="Yes." shape=oval]
       17 [label="No." shape=oval]
