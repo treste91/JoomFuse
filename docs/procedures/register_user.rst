@@ -20,7 +20,7 @@ Register User
       subgraph cluster_1 {
          style=filled;
          color=lightgrey;
-		   node [style=filled,color=white];
+	 node [style=filled,color=white];
          label="Do the component parameters\n allow new user registration?"
          12 [label="Call to: 'IFSApi::getTagsByIFSId'." shape=rectangle]
          13 [label="Trigger event: 'onCustomUserRegistration'." URL="https://joomfuse.readthedocs.io/en/latest/events/joomfuse_events.html#oncustomuserregistration" shape=rectangle]
