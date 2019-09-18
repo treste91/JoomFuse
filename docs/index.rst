@@ -20,6 +20,8 @@ Contents:
    :maxdepth: 3
    
    procedures/register_user
+   procedures/upload_user
+   procedures/delete_user
    
 .. toctree::
    :caption: Events
