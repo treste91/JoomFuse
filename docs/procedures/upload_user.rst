@@ -1,6 +1,9 @@
 Upload User
 ***********
 
+Before saving the user!
+=======================
+
 .. graphviz::
 
    digraph {
@@ -17,7 +20,7 @@ Upload User
       10 [label="Is the email modified?" shape=invhouse]
       11 [label="Yes." shape=oval]
       12 [label="No." shape=oval]
-      13 [label="Do nothing.'." shape=Mcircle]
+      13 [label="Do nothing." shape=Mcircle]
 
       1 -> 2 [arrowhead=vee arrowsize=1]
       2 -> 3 [arrowhead=vee arrowsize=1]
@@ -34,6 +37,9 @@ Upload User
       10 -> 12 [arrowhead=vee arrowsize=1]
       
    }
+   
+After saving the user!
+======================
 
 .. graphviz::
    
@@ -56,8 +62,8 @@ Upload User
       28 [label="Yes." shape=oval]
       29 [label="No." shape=oval]
       30 [label="Call to: 'IFSContact::optIn'." shape=rectangle]
-      31 [label="Sync the user groups.'." shape=rectangle]
-      32 [label="Do nothing.'." shape=Mcircle]
+      31 [label="Sync the user groups." shape=rectangle]
+      32 [label="Do nothing." shape=Mcircle]
      
       14 -> 15 [arrowhead=vee arrowsize=1]
       15 -> 16 [arrowhead=vee arrowsize=1]
