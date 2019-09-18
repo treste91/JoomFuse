@@ -8,7 +8,7 @@ Before saving the user!
 
    digraph {
         
-      1 [label="Catch event: 'onUserBeforeSave'." shape=trapeziod]
+      1 [label="Catch event: 'onUserBeforeSave'." shape=parallelogram]
       2 [label="Is the http post parsing?" shape=invhouse]
       3 [label="Yes." shape=oval]
       4 [label="No." shape=oval]
@@ -37,8 +37,8 @@ Before saving the user!
       10 -> 12 [arrowhead=vee arrowsize=1]
       
    }
-   
-   
+
+|
    
 After saving the user!
 ----------------------
@@ -47,7 +47,7 @@ After saving the user!
    
    digraph {
    
-      14 [label="Catch event: 'onUserAfterSave'." shape=trapeziod]
+      14 [label="Catch event: 'onUserAfterSave'." shape=parallelogram]
       15 [label="Was the save successful?" shape=invhouse]
       16 [label="Yes." shape=oval]
       17 [label="No." shape=oval]
