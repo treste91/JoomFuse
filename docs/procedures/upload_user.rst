@@ -1,8 +1,11 @@
+Upload User
+***********
+
 .. graphviz::
 
    digraph {
 
-      subgraph cluster_1 {
+      subgraph a {
       
         style=filled;
         color=lightgrey;
@@ -24,7 +27,7 @@
         
       }
       
-      subgraph cluster_2 {
+      subgraph b {
       
         style=filled;
         color=lightgrey;
