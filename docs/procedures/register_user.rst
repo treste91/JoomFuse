@@ -5,6 +5,7 @@ Register User
 
    digraph {
    
+      0 [label="Post request from IFS recieved." shape=parallelogram]
       1 [label="Call to: 'IFSFactory::ParseHttpPost'." shape=rectangle]
       2 [label="Trigger event: 'onIFSHttpPostStart'."URL="https://joomfuse.readthedocs.io/en/latest/events/joomfuse_events.html#onifshttppoststart" shape=rectangle]
       3 [label="Call to: 'IFSApi::getContactByIFSId'." shape=rectangle]
@@ -38,6 +39,7 @@ Register User
       23 [label="Trigger event: 'onIFSHttpPostComplete'." URL="https://joomfuse.readthedocs.io/en/latest/events/joomfuse_events.html#onifshttppostcomplete" shape=rectangle]
       
       
+      0 -> 1 [arrowhead=vee arrowsize=1]
       1 -> 2 [arrowhead=vee arrowsize=1]
       2 -> 3 [arrowhead=vee arrowsize=1]
       3 -> 4 [arrowhead=vee arrowsize=1]
