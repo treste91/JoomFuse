@@ -17,7 +17,7 @@ Declaration: dsUpdate($tableName, $recordId ,$updateFields)
 
 Updates an IFS table row with the provided data.
 
-Currently, the `cancelSubscription() <https://joomfuse.readthedocs.io/en/latest/api/xml_rpc.html#cancelsubscription>` function calls this.
+Currently, the `cancelSubscription() <https://joomfuse.readthedocs.io/en/latest/api/xml_rpc.html#cancelsubscription>`_ function calls this.
 
 dsAdd()
 ---------
