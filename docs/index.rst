@@ -30,3 +30,9 @@ Contents:
    events/joomfuse_events
    events/joomla_vanilla_events
    events/3rd_party_events
+
+.. toctree::
+   :caption: API
+   :maxdepth: 3
+   
+   api/xml_rpc
