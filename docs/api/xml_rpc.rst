@@ -17,7 +17,7 @@ Declaration: dsUpdate($tableName, $recordId ,$updateFields)
 
 Updates an IFS table row with the provided data.
 
-Currently, the cancelSubscription() function calls this.
+Currently, the cancelSubscription() function calls this. `Stack Overflow <http://stackoverflow.com/>`_.
 
 dsAdd()
 ---------
