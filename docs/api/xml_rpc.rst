@@ -76,13 +76,17 @@ Called by the getGroups() function of the JFormFieldJoomfuseIFSField class in or
 optIn()
 -------
 
-Declaration:
+Declaration: optIn($email, $reason)
+
+Called by the save() function of the IFSContact class in order to save all the contact information and related data to IFS.
 
 
 assignTagToContact()
 --------------------
 
-Declaration:
+Declaration: assignTagToContact($tagId, $contactId)
+
+
 
 
 removeTagFromContact()
