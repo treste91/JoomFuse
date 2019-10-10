@@ -10,6 +10,8 @@ Declaration: dsQuery($tableName, $searchFields, $returnFields)
 
 Queries an IFS table with the provided data.
 
+*Not currently used.
+
 
 dsUpdate()
 ----------
@@ -28,29 +30,47 @@ Declaration: dsAdd($tableName, $updateFields)
 
 Creates an IFS table row with the provided data.
 
+*Not currently used.
+
 
 getProducts()
 -------------
 
-Declaration:
+Declaration: getProducts()
+
+Fetches all the entries from the IFS 'Product' table.
+
+*Not currently used.
 
 
 getDataFormTabs()
 -----------------
 
-Declaration:
+Declaration: getDataFormTabs()
+
+Fetches all the entries from the IFS 'DataFormTab' table.
+
+Called by the getGroups() function of the JFormFieldJoomfuseIFSField class in order to list all the supported IFS field types.
 
 
 getDataFormGroups()
 -------------------
 
-Declaration:
+Declaration: getDataFormGroups()
+
+Fetches all the entries from the IFS 'DataFormGroup' table.
+
+Called by the getGroups() function of the JFormFieldJoomfuseIFSField class in order to list all the supported IFS field types.
 
 
 getCustomFields()
 -----------------
 
-Declaration:
+Declaration: getDataFormFields()
+
+Fetches all the entries from the IFS 'DataFormField' table.
+
+Called by the getGroups() function of the JFormFieldJoomfuseIFSField class in order to list all the supported IFS field types.
 
 
 optIn()
