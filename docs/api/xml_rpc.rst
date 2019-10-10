@@ -10,7 +10,7 @@ Declaration: dsQuery($tableName, $searchFields, $returnFields)
 
 Queries an IFS table with the provided data.
 
-*Not currently used.
+- Not currently used.
 
 
 dsUpdate()
@@ -30,7 +30,7 @@ Declaration: dsAdd($tableName, $updateFields)
 
 Creates an IFS table row with the provided data.
 
-*Not currently used.
+- Not currently used.
 
 
 getProducts()
@@ -40,7 +40,7 @@ Declaration: getProducts()
 
 Fetches all the entries from the IFS 'Product' table.
 
-*Not currently used.
+- Not currently used.
 
 
 getDataFormTabs()
