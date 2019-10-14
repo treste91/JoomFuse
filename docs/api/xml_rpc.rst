@@ -86,31 +86,52 @@ assignTagToContact()
 
 Declaration: assignTagToContact($tagId, $contactId)
 
+Assignes a specific IFS tag to a specific IFS contact.
 
+Called by the:
+
+- saveIFSTags() function of the IFSContact class in order to save the IFS Tags for a specific contact to IFS according to the add-tag lists created by assignIFSTag() and removeIFSTag() calls.
+
+- httpPostFail() function of the IFSFactory class in order to perform the necessary steps (logging and error tag setting) when the http post is considered as failed.
 
 
 removeTagFromContact()
 ----------------------
 
-Declaration:
+Declaration: removeTagFromContact($tagId, $contactId)
+
+Removes a specific IFS tag to a specific IFS contact.
+
+Called by the saveIFSTags() function of the IFSContact class in order to save the IFS Tags for a specific contact to IFS according to the remove-tag lists created by assignIFSTag() and removeIFSTag() calls.
 
 
 getSubscriptionList()
 ---------------------
 
-Declaration:
+Declaration: getSubscriptionList()
+
+Fetches all the entries from the IFS 'CProgram' table.
+
+Called by the getOptions() function of the JFormFieldJoomfusesubscriptionproductlist class in order to create a field that lists all IFS actionsets in a select list.
 
 
 getSubscriptionPlanList()
 -------------------------
 
-Declaration:
+Declaration: getSubscriptionPlanList()
 
+Fetches all the entries from the IFS 'SubscriptionPlan' table.
+
+- Not currently used.
 
 getSubscriptionListByIFSId()
 ----------------------------
 
-Declaration:
+Declaration: getSubscriptionListByIFSId($contactId)
+
+Fetches all the entries from the IFS 'RecurringOrder' table.
+
+Called by the getSubscriptionList() function of the IFSContact class in order to retrieve the the subscriptions list.
 
 
 cancelSubscription()
@@ -124,7 +145,7 @@ Is called to cancel the subscription of a specific order.
 getInvoicesByIFSId()
 --------------------
 
-Declaration:
+Declaration: 
 
 
 getActionSetList()
