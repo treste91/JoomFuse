@@ -289,19 +289,119 @@ Called by the following functions of the IFSApi in order to retrieve the locatio
 
 - getCustomFields()
 
-- ...
+- getDataFormGroups()
+
+- getDataFormTabs()
+
+- getInvoicesByIFSId()
+
+- getJobsByIFSId()
+
+- getSubscriptionList()
+
+- getSubscriptionListByIFSId()
+
+- getSubscriptionPlanList()
+
+- getTagGroupList()
+
+- getTagList()
+
+- getTagsByIFSId()
+
+- optIn()
+
+- removeTagFromContact()
+
+- runActionSet()
+
+- testConnection()
+
+- updateContactById()
+
+- validateNewCreditCard()
 
 
 getAPIKey()
 -----------
 
-Declaration:
+Declaration: getAPIKey()
+
+Retrieves the key of the API.
+
+Called by the following functions of the IFSApi in order to retrieve the key of the API:
+
+- __getProducts()
+
+- achieveGoal()
+
+- assignTagToContact()
+
+- chargeInvoice()
+
+- createContact()
+
+- deactivateCreditCard()
+
+- dsAdd()
+
+- dsUpdate()
+
+- dsQuery()
+
+- getActionsetList()
+
+- getAppSettings()
+
+- getContactByIFSId()
+
+- getContactsByEmail()
+
+- getCreditCardsByIFSId()
+
+- getCustomFields()
+
+- getDataFormGroups()
+
+- getDataFormTabs()
+
+- getInvoicesByIFSId()
+
+- getJobsByIFSId()
+
+- getSubscriptionList()
+
+- getSubscriptionListByIFSId()
+
+- getSubscriptionPlanList()
+
+- getTagGroupList()
+
+- getTagList()
+
+- getTagsByIFSId()
+
+- optIn()
+
+- removeTagFromContact()
+
+- runActionSet()
+
+- testConnection()
+
+- updateContactById()
+
+- validateNewCreditCard()
 
 
 getContactByEmail()
 -------------------
 
-Declaration:
+Declaration: getContactsByEmail($email)
+
+Fetches all the entries from the IFS 'Contact' table assigned to a specific email.
+
+Called by the locateIFSContact() function of the IFSContact class in order to locate a pre-existing contact by the given email and name and create it if it does not exist.
 
 
 getContactByIFSId()
