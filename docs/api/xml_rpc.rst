@@ -112,7 +112,7 @@ Declaration: getSubscriptionList()
 
 Fetches all the entries from the IFS 'CProgram' table.
 
-Called by the getOptions() function of the JFormFieldJoomfusesubscriptionproductlist class in order to create a field that lists all IFS actionsets in a select list.
+Called by the getOptions() function of the JFormFieldJoomfusesubscriptionproductlist class in order to create a field that lists all IFS subscriptions in a select list.
 
 
 getSubscriptionPlanList()
@@ -145,67 +145,151 @@ Is called to cancel the subscription of a specific order.
 getInvoicesByIFSId()
 --------------------
 
-Declaration: 
+Declaration: getInvoicesByIFSId($contactId)
 
+Fetches all the entries from the IFS 'Invoice' table.
 
-getActionSetList()
-------------------
-
-Declaration:
+Called by the getInvoices() function of the IFSContact class in order to retrieve the the invoices list.
 
 
 getJobsByIFSId()
 ----------------
 
-Declaration:
+Declaration: getJobsByIFSId($contactId)
+
+Fetches all the entries from the IFS 'Job' table.
+
+Called by the getJobs() function of the IFSContact class in order to retrieve the the jobs list.
+
+
+getActionSetList()
+------------------
+
+Declaration: getInvoicesByIFSId($contactId)
+
+Fetches all the entries from the IFS 'ActionSequence' table.
+
+Called by the getOptions() function of the JFormFieldJoomfuseactionsetlist class in order to create a field that lists all IFS actionsets in a select list.
 
 
 runActionSet()
 --------------
 
-Declaration:
+Declaration: runActionSet($contactId, $actionsetId)
+
+Runs an actionset.
+
+Called by the runActionSet() function of the IFSContact class in order to run the specified actionset on this contact.
 
 
 achieveGoal()
 -------------
 
-Declaration:
+Declaration: achieveGoal($contactId, $callName, $integration)
+
+Achieves a goal for a contact.
+
+Called by the achieveGoal() function of the IFSContact class in order to achieve a goal for a contact.
 
 
 getTagList()
 ------------
 
-Declaration:
+Declaration: getTagList()
+
+Fetches all the entries from the IFS 'ContactGroup' table.
+
+Called by the getGroups() function of the JFormFieldJoomfusetaglist class in order to create a field that lists all IFS tags in a select list.
 
 
 getTagGroupList()
 -----------------
 
-Declaration:
+Declaration: getTagGroupList()
+
+Fetches all the entries from the IFS 'ContactGroupCategory' table.
+
+Called by the getGroups() function of the JFormFieldJoomfusetaglist class in order to create a field that lists all IFS tags in a select list.
 
 
 getCreditCardsByIFSId()
 -----------------------
 
-Declaration:
+Declaration: getCreditCardsByIFSId($ifs_id)
+
+Fetches all the entries from the IFS 'CreditCard' table.
+
+Called by the getCreditCards() function of the IFSContact class in order to get all the credit card information assigned to a specific contact.
 
 
 getTagsByIFSId()
 ----------------
 
-Declaration:
+Declaration: getTagsByIFSId($ifs_id)
+
+Fetches all the entries from the IFS 'ContactGroupAssign' table.
+
+Called by the:
+
+- getIFSTags() function of the IFSContact class in order to get the list of IFS tags assigned to the spcific contact.
+
+- parseHttpPost() function of the IFSFactory class in order to parse the http post based on the condition of the existence of a tag.
 
 
 getComponentParams()
 --------------------
 
-Declaration:
+Declaration: getComponentParams()
+
+Retrieves the parameters of the JoomFuse component.
+
+Called by the following functions of the IFSApi in order to retrieve the JoomFuse component parameters:
+
+- getApiLocation()
+
+- getApiKey()
 
 
 getAPILocation()
 ----------------
 
-Declaration:
+Declaration: getApiLocation($testAppName)
+
+Retrieves the location of the API.
+
+Called by the following functions of the IFSApi in order to retrieve the location of the API:
+
+- __getProducts()
+
+- achieveGoal()
+
+- assignTagToContact()
+
+- chargeInvoice()
+
+- createContact()
+
+- deactivateCreditCard()
+
+- dsAdd()
+
+- dsUpdate()
+
+- dsQuery()
+
+- getActionsetList()
+
+- getAppSettings()
+
+- getContactByIFSId()
+
+- getContactsByEmail()
+
+- getCreditCardsByIFSId()
+
+- getCustomFields()
+
+- ...
 
 
 getAPIKey()
