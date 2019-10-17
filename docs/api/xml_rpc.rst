@@ -407,46 +407,92 @@ Called by the locateIFSContact() function of the IFSContact class in order to lo
 getContactByIFSId()
 -------------------
 
-Declaration:
+Declaration: getContactByIFSId($ifs_id)
+
+Fetches all the entries from the IFS 'Contact' table assigned to a specific IFS id.
+
+Called by the parseHttpPost() function of the IFSFactory class in order to retrieve the contact fields.
 
 
 createContact()
 ---------------
 
-Declaration:
+Declaration: createContact($apiFields)
+
+Creates a contact with the provided fields.
+
+Called by the locateIFSContact() function of the IFSContact class in order to locate a pre-existing contact by the given email and name and creates it if it does not exist.
 
 
 updateContactById()
 ---------------------
 
-Declaration:
+Declaration: updateContactById(array $apiFields, $ifs_id)
+
+Updates a contact based on the provided fields.
+
+Called by the:
+
+- save() function of the IFSContact class in order to update a contact when the contact fields have been modified.
+
+- registerUser() function of the IFSFactory class in order to update a contact if the username or passwords fields have been changed.
 
 
 testConnection()
 ----------------
 
-Declaration:
+Declaration: testConnection($appName)
+
+Tests the connection to an API server (without credentials).
+
+- Not currently used.
 
 
 testAPICredentials()
 --------------------
 
-Declaration:
+Declaration: testAPICredentials($apiKey, $apiLocation)
+
+Tests API credentials against the API server (with credentials).
+
+- Not currently used.
 
 
 getAppSettings()
 ----------------
 
-Declaration:
+Declaration: getAppSetting($moduleName, $settingName)
+
+Fetches an app setting through the DataService.
+
+- Not currently used.
 
 
 validateNewCreditCard()
 -----------------------
 
-Declaration:
+Declaration: validateNewCreditCard($cardType, $contactId, $cardNumber, $expirationMonth, $expirationYear, $cvv2)
+
+Validates a new credit card.
+
+- Not currently used.
 
 
 chargeInvoice()
 ---------------
 
-Declaration:
+Declaration: chargeInvoice($invoiceId, $notes, $creditCardId, $merchantAccountId, $bypassComissions)
+
+
+
+- Not currently used.
+
+
+deactivateCreditCard()
+-----------------------
+
+Declaration: deactivateCreditCard($cardId)
+
+Deactivates the given credit card
+
+- Not currently used.
