@@ -259,7 +259,7 @@ Retrieves the location of the API.
 
 Called by the following functions of the IFSApi in order to retrieve the location of the API:
 
-- __getProducts()
+- getProducts()
 
 - achieveGoal()
 
@@ -331,7 +331,7 @@ Retrieves the key of the API.
 
 Called by the following functions of the IFSApi in order to retrieve the key of the API:
 
-- __getProducts()
+- getProducts()
 
 - achieveGoal()
 
