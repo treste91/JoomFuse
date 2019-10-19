@@ -36,5 +36,4 @@ Contents:
    :maxdepth: 3
    
    api/xml_rpc
-   api/ifs_contact
-   api/ifs_factory
+   api/helper_functions
