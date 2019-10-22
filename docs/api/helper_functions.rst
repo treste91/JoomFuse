@@ -288,3 +288,125 @@ Called by the:
 
 IFS Factory
 -----------
+
+
+getUserContact()
+^^^^^^^^^^^^^^^^
+
+Declaration: getUserContact($id)
+
+
+isParsingHttpPost()
+^^^^^^^^^^^^^^^^^^^
+
+Declaration: isParsingHttpPost()
+
+
+getFieldMappings()
+^^^^^^^^^^^^^^^^^^^
+
+Declaration: getFieldMappings()
+
+
+contactIdBeingProcessed()
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Declaration: contactIdBeingProcessed($is_id)
+
+
+contactIdEndsProcess()
+^^^^^^^^^^^^^^^^^^^^^^
+
+Declaration: contactIdEndsProcess($is_id)
+
+
+parseHttpPost()
+^^^^^^^^^^^^^^^
+
+Declaration: parseHttpPost()
+
+
+registerUser()
+^^^^^^^^^^^^^^
+
+Declaration: registerUser($ifs_contact)
+
+
+httpPostFail()
+^^^^^^^^^^^^^^
+
+Declaration: httpPostFail($message, $contactId)
+
+
+mailUser()
+^^^^^^^^^^
+
+Declaratoion: mailUser($topic, $subject, $email)
+
+
+mailAdmin()
+^^^^^^^^^^^
+
+Declaration: mailAdmin($topic,$body)
+
+
+logError()
+^^^^^^^^^^
+
+Declaration: logError($message, $level)
+
+
+getPluginUserGroups()
+^^^^^^^^^^^^^^^^^^^^^
+
+Declaration: getPluginUserGroups($ifs_user, $isNew , $remove, $addGroups)
+
+
+getUserByIFSId()
+^^^^^^^^^^^^^^^^
+
+Declaration: getUserByIFSId($ifs_id)
+
+
+getUserByEmailAndName()
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Declaration: getUserByEmailAndName($search_email, $search_name)
+
+
+getNameByFLName()
+^^^^^^^^^^^^^^^^^
+
+Declaration: getNameByFLName($fname, $lname)
+
+
+getFirstNameFromName()
+^^^^^^^^^^^^^^^^^^^^^^
+
+Declaration: getFirstNameFromName($name)
+
+
+getLastNameFromName()
+^^^^^^^^^^^^^^^^^^^^^
+
+Declaration: getLastNameFromName($name)
+
+
+getNamePart()
+^^^^^^^^^^^^^
+
+Declaration: getNamePart($name, $lastName)
+
+
+scheduleCron()
+^^^^^^^^^^^^^^
+
+Declaration: scheduleCron($date, $handler, $params)
+
+
+cronCheck()
+^^^^^^^^^^^
+
+Declaration: cronCheck()
+
+
