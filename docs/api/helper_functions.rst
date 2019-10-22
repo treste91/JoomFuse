@@ -119,11 +119,19 @@ Requests the assignement of a tag to this contact.
 
 Called by the:
 
-- 
+- parseHttpPost() of the IFSFactory class.
 
-- 
+- mod_joomfusetrigger.php
 
-- 
+- onContactUserDelete() function of the plgJoomfuseJoomla class.
+
+- onJoomfuseAfterContactAssociation() function of the plgJoomfuseJoomla class.
+
+- onJoomFuseBeforeContactSave() function of the plgJoomfuseJoomla class.
+
+- onUserAfterSave() function of the PlgUserJoomfuse class.
+
+- syncUserGroups() function of the PlgUserJoomfuse class.
 
 
 removeIFSTag()
@@ -135,11 +143,12 @@ Requests the disassociation of a tag to this contact.
 
 Called by the:
 
-- 
+- onContactUserDelete() function of the plgJoomfuseJoomla class.
 
-- 
+- onJoomfuseAfterContactAssociation() function of the plgJoomfuseJoomla class.
 
-- 
+- syncUserGroups() function of the PlgUserJoomfuse class.
+
 
 hasIFSTagByName()
 ^^^^^^^^^^^^^^^^^
@@ -189,6 +198,90 @@ Called by the:
 - getUserContact() of the IFSContact class in order to retrieve the contact instance based on the provided user id.
 
 - associateNextUserBatch() of the JoomfuseModelAssociateall class in order to retrieve the contact instance based on the provided user id.
+
+
+getSubscriptionList()
+^^^^^^^^^^^^^^^^^^^^^
+
+Declaration: getSubscriptionList($causesAPICall)
+
+Retrieves the subscriptions of the provided user.
+
+- Currently not used.
+
+
+getInvoices()
+^^^^^^^^^^^^^
+
+Declaration: getInvoices($causesAPICall)
+
+Retrieves the invoices of the provided user.
+
+- Currently not used.
+
+
+getJobs()
+^^^^^^^^^^^^^
+
+Declaration: getJobs($causesAPICall)
+
+Retrieves the jobs of the provided user.
+
+Called by the getJob() function of the IFSContact class in order to retrieve a specific job of a specific user.
+
+
+getJob()
+^^^^^^^^^^^^^
+
+Declaration: getJob($jobId, $causesAPICall)
+
+Retrieves a specific job of the provided user.
+
+- Currently not used.
+
+
+runActionSet()
+^^^^^^^^^^^^^^
+
+Declaration: runActionSet($actionsetId, $causesAPICall)
+
+Runs the specified actionset on this contact.
+
+- Currently not used.
+
+
+achieveGoal()
+^^^^^^^^^^^^^
+
+Declaration: achieveGoal($callName, $integration, $causesAPICall)
+
+Runs the specified actionset on this contact.
+
+Called by the parseHttpPost() function of the IFSFactory class in order to run the specified actionset.
+
+
+getCreditCards()
+^^^^^^^^^^^^^^^^
+
+Declaration: getCreditCards($causesAPICall)
+
+Gets all the credit card information assigned to this contact.
+
+- Currently not used.
+
+
+OptIn()
+^^^^^^^
+
+Declaration: OptIn($message)
+
+Requests that the contact will be opted in.
+
+Called by the:
+
+- onJoomfuseAfterContactAssociation() function of the PlgJoomfuseJoomla class in order to address the opt-ins.
+
+- onUserAfterSave() function of the PlgUserJoomfuse class in order to opt-in new users.
 
 
 
