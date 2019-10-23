@@ -447,11 +447,23 @@ getUserByIFSId()
 
 Declaration: getUserByIFSId($ifs_id)
 
+Retrieves a user by the given ifs_id.
+
+Called by the 
+
+- parseHttpPost() function of the IFSFactory class.
+
+- getDeleteResult() function of the JoomFuseModelDeleteUser class.
+
 
 getUserByEmailAndName()
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 Declaration: getUserByEmailAndName($search_email, $search_name)
+
+Retrieves a user by the given email and name.
+
+Called by the parseHttpPost() function of the IFSFactory class.
 
 
 getNameByFLName()
@@ -459,11 +471,25 @@ getNameByFLName()
 
 Declaration: getNameByFLName($fname, $lname)
 
+Extrapolates the name of a user based on the first and last name.
+
+Called by the 
+
+- parseHttpPost() function of the IFSFactory class.
+
+- registerUser() function of the IFSFactory class.
+
+- onSetJoomlaFieldsFromContact() function of the plgJoomfuseJoomla class.
+
 
 getFirstNameFromName()
 ^^^^^^^^^^^^^^^^^^^^^^
 
 Declaration: getFirstNameFromName($name)
+
+Returns the First Name part from a full name.
+
+Called by the getJoomFuseContactFields() function of the plgJoomfuseJoomla class.
 
 
 getLastNameFromName()
@@ -471,11 +497,23 @@ getLastNameFromName()
 
 Declaration: getLastNameFromName($name)
 
+Returns the Last Name part from a full name.
+
+Called by the getJoomFuseContactFields() function of the plgJoomfuseJoomla class.
+
 
 getNamePart()
 ^^^^^^^^^^^^^
 
 Declaration: getNamePart($name, $lastName)
+
+Returns either the first or the last name given a name. Helper function for implementing getFirstNameFromName and getLastNameFromName.
+
+Called by the 
+
+- getFirstNameFromName() function of the IFSFactory class.
+
+- getLastNameFromName() function of the IFSFactory class.
 
 
 scheduleCron()
@@ -483,10 +521,21 @@ scheduleCron()
 
 Declaration: scheduleCron($date, $handler, $params)
 
+Schedule the execution of a cronjob.
+
+- Currently not used.
+
 
 cronCheck()
 ^^^^^^^^^^^
 
 Declaration: cronCheck()
 
+Checks the cron table for any pending cronjobs and triggers events for their execution.
+
+Called by the:
+
+- display() function of the JoomfuseViewCron class.
+
+- __construct() function of the PlgSystemJoomfuse class.
 
