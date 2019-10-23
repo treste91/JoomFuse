@@ -295,17 +295,57 @@ getUserContact()
 
 Declaration: getUserContact($id)
 
+Get the IFSContact for the optionally provided user id (defaults to current user).
+
+Called by the:
+
+- associateContactForUserId() function of the JoomfuseControllerMain class.
+
+- getPluginUserGroups() function of the IFSFactory class.
+
+- parseHttpPost() function of the IFSFactory class.
+
+- mod_joomfusetrigger.php
+
+- onContactUserDelete() function of the plgJoomfuseJoomla class.
+
+- onJoomFuseBeforeContactSave() function of the plgJoomfuseJoomla class.
+
+- replaceShortcodes() function of the PlgSystemJoomfuse class.
+
+- onUserAfterDelete() function of the PlgUserJoomfuse class.
+
+- onUserAfterSave() function of the PlgUserJoomfuse class.
+
+- onUserBeforeDelete() function of the PlgUserJoomfuse class.
+
+- onUserBeforeSave() function of the PlgUserJoomfuse class.
+
+- onUserLogin() function of the PlgUserJoomfuse class.
+
 
 isParsingHttpPost()
 ^^^^^^^^^^^^^^^^^^^
 
 Declaration: isParsingHttpPost()
 
+Checks if we're currently parsing an HTTP POST.
+
+Called by the:
+
+- onUserAfterSave() function of the PlgUserJoomfuse class.
+
+- onUserBeforeSave() function of the PlgUserJoomfuse class.
+
 
 getFieldMappings()
 ^^^^^^^^^^^^^^^^^^^
 
 Declaration: getFieldMappings()
+
+Retrieves the appropriate field mappings.
+
+Called by the getContactByIFSId() function of the IFSApi class to retrieve the field mappings.
 
 
 contactIdBeingProcessed()
