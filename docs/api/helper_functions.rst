@@ -353,11 +353,19 @@ contactIdBeingProcessed()
 
 Declaration: contactIdBeingProcessed($is_id)
 
+Signals the beginning of the HTTP Post parsing of the given IFS id.
+
+Called by the parseHttpPost() function of the IFSFactory class.
+
 
 contactIdEndsProcess()
 ^^^^^^^^^^^^^^^^^^^^^^
 
 Declaration: contactIdEndsProcess($is_id)
+
+Signals the end of the HTTP POST process so other posts can work on the same contact id.
+
+Called by the parseHttpPost() function of the IFSFactory class.
 
 
 parseHttpPost()
@@ -365,11 +373,19 @@ parseHttpPost()
 
 Declaration: parseHttpPost()
 
+Parses Infusionsoft HTTP POSTs.
+
+Called by the function display() of the JoomfuseViewJoomfuse class.
+
 
 registerUser()
 ^^^^^^^^^^^^^^
 
 Declaration: registerUser($ifs_contact)
+
+Registers a new user according to the given contact object.
+
+Called by the parseHttpPost() function of the IFSFactory class.
 
 
 httpPostFail()
@@ -377,11 +393,19 @@ httpPostFail()
 
 Declaration: httpPostFail($message, $contactId)
 
+Performs the necessary steps (logging and error tag setting) when the http post is considered as failed.
+
+Called by the parseHttpPost() function of the IFSFactory class.
+
 
 mailUser()
 ^^^^^^^^^^
 
 Declaratoion: mailUser($topic, $subject, $email)
+
+Generic function to email users messages generated from the HTTP POST
+
+Called by the registerUser() function of the IFSFactory class.
 
 
 mailAdmin()
@@ -389,17 +413,33 @@ mailAdmin()
 
 Declaration: mailAdmin($topic,$body)
 
+Email admin users for any registration errors.
+
+Called by the:
+
+- registerUser() function of the IFSFactory class.
+
+- mailUser() function of the IFSFactory class.
+
 
 logError()
 ^^^^^^^^^^
 
 Declaration: logError($message, $level)
 
+Performs logging for the component. Will only create log entries in the /log/com_joomfuse.txt file if the debug option LOG is enabled.
+
+Called by numerous function throughout the JoomFuse component and the associated plugins and modules.
+
 
 getPluginUserGroups()
 ^^^^^^^^^^^^^^^^^^^^^
 
 Declaration: getPluginUserGroups($ifs_user, $isNew , $remove, $addGroups)
+
+Requests the joomfuse plugin to decide on which user groups they want to assign (or drop) to the given user.
+
+Called by the parseHttpPost() function of the IFSFactory class.
 
 
 getUserByIFSId()
